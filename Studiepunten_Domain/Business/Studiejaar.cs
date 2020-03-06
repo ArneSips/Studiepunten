@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Studiepunten_Domain.Business
 {
-    class Studiejaar
+    public class Studiejaar
     {
         //velden
         private int _idstudiejaar;

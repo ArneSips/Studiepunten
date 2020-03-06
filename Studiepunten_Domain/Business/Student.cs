@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Studiepunten_Domain.Business
 {
-    class Student
+    public class Student
     {
         //velden
         private int _idgebruiker;
@@ -48,6 +48,12 @@ namespace Studiepunten_Domain.Business
             _naam = naam;
             _wachtwoord = wachtwoord;
             _punten = punten;
+        }
+
+        public Student (string naam, string wachtwoord)
+        {
+            _naam = naam;
+            _wachtwoord = wachtwoord;
         }
 
         //Methods

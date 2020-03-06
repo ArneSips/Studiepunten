@@ -13,7 +13,7 @@ namespace Studiepunten_Domain.Persistence
         private string _connectionString;
         public StudentStudierichtingMapper()
         {
-            _connectionString = "server = localhost; user id = root;password=1234; database=rapport";
+            _connectionString = "server = localhost; user id = root;password=1234; database=studiepunten";
         }
         public StudentStudierichtingMapper(string connectionString)
         {
@@ -25,7 +25,7 @@ namespace Studiepunten_Domain.Persistence
             MySqlConnection conn = new MySqlConnection(_connectionString);
 
             //Het SQL-commando definiëren
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM studiepunten.student_has_studierichting", conn);
+            MySqlCommand cmd = new MySqlCommand("SELECT student.Naam as Naam, studierichting.Naam as Studierichting FROM studiepunten.student_has_studierichting INNER JOIN studiepunten.student on student_has_studierichting.fkStudent = student.Naam INNER JOIN studiepunten.studierichting on student_has_studierichting.fkStudierichting = studierichting.Naam; ", conn);
             List<StudentStudierichting> studentStudierichtingLijst = new List<StudentStudierichting>();
             conn.Open();
             MySqlDataReader dataReader = cmd.ExecuteReader();

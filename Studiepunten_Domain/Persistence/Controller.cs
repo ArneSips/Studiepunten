@@ -13,7 +13,7 @@ namespace Studiepunten_Domain.Persistence
          private string _connectionString;
         public Controller()
         {
-            _connectionString = "server = localhost; user id = root;password=1234; database=rapport";
+            _connectionString = "server = localhost; user id = root;password=1234; database=studiepunten";
         }
         public Controller(string connectionString)
         {
@@ -41,73 +41,105 @@ namespace Studiepunten_Domain.Persistence
             mapper.AdjustStudentFromDB(student, id);
         }
 
-            public List<Studiejaar> getStudiejaar()
+            public List<StudentStudierichting> getStudentStudierichting()
             {
-                StudiejaarMapper mapper = new StudiejaarMapper(_connectionString);
-                return mapper.getStudiejaarFromDB();
+                StudentStudierichtingMapper mapper = new StudentStudierichtingMapper(_connectionString);
+                return mapper.getStudentStudierichtingFromDB();
             }
-            public void addStudiejaar(Studiejaar studiejaar)
+            public void addStudentStudierichting(StudentStudierichting studentstudierichting)
             {
-                StudiejaarMapper mapper = new StudiejaarMapper(_connectionString);
-                mapper.addStudiejaarToDB(studiejaar);
+                StudentStudierichtingMapper mapper = new StudentStudierichtingMapper(_connectionString);
+                mapper.addStudentStudierichtingToDB(studentstudierichting);
             }
-
-        public List<Studierichting> getStudierichting()
-        {
-            StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
-            return mapper.getStudierichtingFromDB();
-        }
-        public void addStudierichting(Studierichting studierichting)
-        {
-            StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
-            mapper.addStudierichtingToDB(studierichting);
-        }
-        public void removeStudierichting(int id)
-        {
-            StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
-            mapper.removeStudierichtingFromDB(id);
-        }
-        public void adjustStudierichting(Studierichting studierichting, int id)
-        {
-            StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
-            mapper.AdjustStudentFromDB(studierichting, id);
-        }
-
-            public List<Vak> getVak()
+            public void adjustStudentStudierichting(StudentStudierichting studentstudierichting, int id)
             {
-                VakMapper mapper = new VakMapper(_connectionString);
-                return mapper.getVakFromDB();
-            }
-            public void addVak(Vak vak)
-            {
-                VakMapper mapper = new VakMapper(_connectionString);
-                mapper.addVakToDB(vak);
-            }
-            public void removeVak(int id)
-            {
-                VakMapper mapper = new VakMapper(_connectionString);
-                mapper.removeVakFromDB(id);
-            }
-            public void adjustVak(Vak vak, int id)
-            {
-                VakMapper mapper = new VakMapper(_connectionString);
-                mapper.AdjustVakFromDB(vak, id);
+                StudentStudierichtingMapper mapper = new StudentStudierichtingMapper(_connectionString);
+                mapper.AdjustStudentStudierichtingFromDB(studentstudierichting, id);
             }
 
-        public List<StudentStudierichting> getStudentStudierichting()
+        public List<Studiejaar> getStudiejaar()
         {
-            StudentStudierichtingMapper mapper = new StudentStudierichtingMapper(_connectionString);
-            return mapper.getStudentStudierichtingFromDB();
+            StudiejaarMapper mapper = new StudiejaarMapper(_connectionString);
+            return mapper.getStudiejaarFromDB();
         }
-        public void addStudentStudierichting(Student student)
+        public void addStudiejaar(Studiejaar studiejaar)
         {
-            StudentMapper mapper = new StudentMapper(_connectionString);
-            mapper.addStudentToDB(student);
+            StudiejaarMapper mapper = new StudiejaarMapper(_connectionString);
+            mapper.addStudiejaarToDB(studiejaar);
         }
-        public void adjustStudentStudierichting(StudentStudierichting studentstudierichting, int id)
+
+            public List<Studierichting> getStudierichting()
+            {
+                StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
+                return mapper.getStudierichtingFromDB();
+            }
+            public void addStudierichting(Studierichting studierichting)
+            {
+                StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
+                mapper.addStudierichtingToDB(studierichting);
+            }
+            public void removeStudierichting(int id)
+            {
+                StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
+                mapper.removeStudierichtingFromDB(id);
+            }
+            public void adjustStudierichting(Studierichting studierichting, int id)
+            {
+                StudierichtingMapper mapper = new StudierichtingMapper(_connectionString);
+                mapper.AdjustStudentFromDB(studierichting, id);
+            }
+
+        public List<Vak> getVak()
         {
-            StudentStudierichtingMapper mapper = new StudentStudierichtingMapper(_connectionString);
-            mapper.AdjustStudentStudierichtingFromDB(studentstudierichting, id);
+            VakMapper mapper = new VakMapper(_connectionString);
+            return mapper.getVakFromDB();
+        }
+        public void addVak(Vak vak)
+        {
+            VakMapper mapper = new VakMapper(_connectionString);
+            mapper.addVakToDB(vak);
+        }
+        public void removeVak(int id)
+        {
+            VakMapper mapper = new VakMapper(_connectionString);
+            mapper.removeVakFromDB(id);
+        }
+        public void adjustVak(Vak vak, int id)
+        {
+            VakMapper mapper = new VakMapper(_connectionString);
+            mapper.AdjustVakFromDB(vak, id);
+        }
+
+            public List<VakStudent> getVakStudent()
+            {
+                VakStudentMapper mapper = new VakStudentMapper(_connectionString);
+                return mapper.getVakStudentFromDB();
+            }
+            public void addVakStudent(VakStudent vakStudent)
+            {
+                VakStudentMapper mapper = new VakStudentMapper(_connectionString);
+                mapper.addVakStudentToDB(vakStudent);
+            }
+            public void removeVakStudent(int idVak, int idGebruiker)
+            {
+                VakStudentMapper mapper = new VakStudentMapper(_connectionString);
+                mapper.removeVakStudentFromDB(idVak, idGebruiker);
+            }
+
+        public List<VakStudiejaar> getVakStudiejaar()
+        {
+            VakStudiejaarMapper mapper = new VakStudiejaarMapper(_connectionString);
+            return mapper.getVakStudiejaarFromDB();
+        }
+        public void addVakStudiejaar(VakStudiejaar vakStudiejaar)
+        {
+            VakStudiejaarMapper mapper = new VakStudiejaarMapper(_connectionString);
+            mapper.addVakStudiejaarToDB(vakStudiejaar);
+        }
+        public void removeVakStudiejaar(int idVak, int idStudiejaar)
+        {
+            VakStudiejaarMapper mapper = new VakStudiejaarMapper(_connectionString);
+            mapper.removeVakStudiejaarFromDB(idVak, idStudiejaar);
         }
     }
 }

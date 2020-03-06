@@ -1,0 +1,18 @@
+﻿<Window x:Class="Tijdelijke_WPF_GIP.Register"
+        x:Name="Register_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tijdelijke_WPF_GIP"
+        mc:Ignorable="d"
+        Title="Register" Height="150" Width="250">
+    <Grid>
+        <TextBox x:Name="txtRegisterNaam" HorizontalAlignment="Left" Height="23" Margin="112,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="txtRegisterWachtwoord" HorizontalAlignment="Left" Margin="112,51,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Naam:" HorizontalAlignment="Left" Margin="17,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wachtwoord:" HorizontalAlignment="Left" Margin="17,43,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRegisterAccount" Content="Maak account" HorizontalAlignment="Left" Margin="112,80,0,0" VerticalAlignment="Top" Width="120" Click="BtnRegisterAccount_Click"/>
+
+    </Grid>
+</Window>

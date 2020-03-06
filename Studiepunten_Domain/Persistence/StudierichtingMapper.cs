@@ -13,7 +13,7 @@ namespace Studiepunten_Domain.Persistence
         private string _connectionString;
         public StudierichtingMapper()
         {
-            _connectionString = "server = localhost; user id = root;password=1234; database=rapport";
+            _connectionString = "server = localhost; user id = root;password=1234; database=studiepunten";
         }
         public StudierichtingMapper(string connectionString)
         {

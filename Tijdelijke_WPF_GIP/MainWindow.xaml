@@ -1,0 +1,19 @@
+﻿<Window x:Class="Tijdelijke_WPF_GIP.MainWindow"
+        x:Name="Main_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tijdelijke_WPF_GIP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300">
+    <Grid>
+        <Button x:Name="BtnBevestigInLoggen" Content="Log in" HorizontalAlignment="Left" Margin="135,88,0,0" VerticalAlignment="Top" Width="120" Click="BtnBevestigInLoggen_Click"/>
+        <TextBox x:Name="txtNaamInLoggen" HorizontalAlignment="Left" Height="23" Margin="135,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtWachtwoordInLoggen" HorizontalAlignment="Left" Height="23" Margin="135,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Naam:" HorizontalAlignment="Left" Margin="39,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wachtwoord:" HorizontalAlignment="Left" Margin="39,56,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRegistreren" Content="Registreren" HorizontalAlignment="Left" Margin="135,113,0,0" VerticalAlignment="Top" Width="120" Click="BtnRegistreren_Click"/>
+        <ListBox x:Name="lbxUsers" HorizontalAlignment="Left" Height="215" Margin="10,144,0,0" VerticalAlignment="Top" Width="272"/>
+    </Grid>
+</Window>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Studiepunten_Domain.Business
 {
-    class StudentStudierichting
+    public class StudentStudierichting
     {
         //velden
         private int _idstudentstudierichting;

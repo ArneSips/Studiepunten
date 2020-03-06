@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Studiepunten_Domain.Business
 {
-    class Vak
+    public class Vak
     {
         //velden
         private int _idvak;

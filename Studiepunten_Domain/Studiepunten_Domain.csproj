@@ -49,11 +49,19 @@
   <ItemGroup>
     <Compile Include="Business\Controller.cs" />
     <Compile Include="Business\Student.cs" />
+    <Compile Include="Business\StudentRepository.cs" />
     <Compile Include="Business\StudentStudierichting.cs" />
+    <Compile Include="Business\StudentStudierichtingRepository.cs" />
     <Compile Include="Business\Studiejaar.cs" />
-    <Compile Include="Business\Studiepunten.cs" />
+    <Compile Include="Business\StudiejaarRepository.cs" />
     <Compile Include="Business\Studierichting.cs" />
+    <Compile Include="Business\StudierichtingRepository.cs" />
     <Compile Include="Business\Vak.cs" />
+    <Compile Include="Business\VakRepository.cs" />
+    <Compile Include="Business\VakStudent.cs" />
+    <Compile Include="Business\VakStudentRepository.cs" />
+    <Compile Include="Business\VakStudiejaar.cs" />
+    <Compile Include="Business\VakStudiejaarRepository.cs" />
     <Compile Include="Persistence\Controller.cs" />
     <Compile Include="Persistence\StudentMapper.cs" />
     <Compile Include="Persistence\StudentStudierichtingMapper.cs" />
